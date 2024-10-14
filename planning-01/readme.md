@@ -40,6 +40,8 @@ https://www.figma.com/design/NA082mffZVGf3jbnRe6d43/Wireframe?node-id=0-1&t=5zCk
 ### 架構圖
 ![Mind map](https://hackmd.io/_uploads/B1UEMgOyye.png)
 
+![messageImage_1728918453775](https://github.com/user-attachments/assets/6381c04d-5273-476b-be58-700e929bc23f)
+
 
 
 ### 技術
