@@ -68,7 +68,7 @@ export const getAssignmentsAndExams = async (req, res) => {
 
     const exams = await Exam.findAll({
       where: { CourseID: courseID, DeletedAt: null },
-      attributes: ["ID", "Name", "StartDate", "DueDate","Description"],
+      attributes: ["ID", "Name", "StartDate", "DueDate", "Description"],
       include: [
         {
           model: Course,

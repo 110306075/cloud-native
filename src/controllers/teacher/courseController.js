@@ -20,7 +20,7 @@ export const getCoursesByTeacher = async (req, res) => {
       where: { UserID: teacherId, DeletedAt: null },
       include: {
         model: Course,
-        attributes: ["ID", "Name", "Semester","StudentLimit","StudentCount"],
+        attributes: ["ID", "Name", "Semester", "StudentLimit", "StudentCount"],
         where: { DeletedAt: null },
       },
       order: [[{ model: Course }, "Semester", "DESC"]],

@@ -19,7 +19,6 @@ if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {
   sequelize = new Sequelize(
-    
     config.database,
     config.username,
     config.password,
@@ -39,7 +38,7 @@ const modelFiles = fs.readdirSync(__dirname).filter((file) => {
 
 for (const file of modelFiles) {
   const modelImport = await import(path.join(__dirname, file));
-  const initModelFunc = modelImport.default; 
+  const initModelFunc = modelImport.default;
   const model = initModelFunc(sequelize, DataTypes);
   db[model.name] = model;
 }

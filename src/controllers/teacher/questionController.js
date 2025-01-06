@@ -299,7 +299,7 @@ export const createQuestion = async (req, res) => {
 };
 
 export const deleteQuestion = async (req, res) => {
-  const transaction = await Question.sequelize.transaction(); // Start a transaction
+  const transaction = await Question.sequelize.transaction();
 
   try {
     const { questionID } = req.params;

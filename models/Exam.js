@@ -27,7 +27,6 @@ export default (sequelize, DataTypes) => {
     {
       tableName: "Exam",
       timestamps: false,
-      
     }
   );
   return Exam;

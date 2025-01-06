@@ -29,7 +29,6 @@ export default (sequelize, DataTypes) => {
     {
       tableName: "Assignment",
       timestamps: false,
-      
     }
   );
   return Assignment;

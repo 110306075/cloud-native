@@ -52,8 +52,6 @@ export function getAllVMStats() {
   }));
 }
 
-
-
 export function selectBestVM(requiredCpu, requiredMemory) {
   const vmStats = getAllVMStats();
   let bestVM = null;
@@ -169,12 +167,10 @@ export async function submitCode(req, res) {
       allocatedResource.memory
     );
     if (!bestVM) {
-      return res
-        .status(503)
-        .json({
-          message:
-            "No worker available Current Server is too busy, please send it later",
-        });
+      return res.status(503).json({
+        message:
+          "No worker available Current Server is too busy, please send it later",
+      });
     }
 
     const agentId = bestVM.agentId;
